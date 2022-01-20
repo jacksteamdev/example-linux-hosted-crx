@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Clock on Top",
+  "description": "A Clock that displays on top of each website",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "css": ["roboto.css", "content.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmLAAyn2Fw/FoyhfpjsqwvhuX4JJkoPc/5xcQktY+5HgVcY11Mr2iMEoWqLbrnum3+1ZsKGcjK8eoYLwjbuMISznqvGncq1+jOUWyNSnFAQKuMwsRJhXCLz4r9+wRI8McLpVLmh8+8Nh+eNzUlvMXwsa4ACd5XH3tRm0mI5qDQnAkepnL1fIi3HJYXL1wXnzkWBYYKT3p5SPnWH8CKMtG7tzix+GhnkQDuaXMulaRHPLCbssnwklwz2rtXzb9dcTXjbPNoi+rx5E+rrvUQRSxOONVO3g0B+TtiabSNCeMoqTK1sq3Iql7J4TXkihaIHqWSf2etDf6EtMFRHYoB7RJ1wIDAQAB",
+  "update_url": "http://localhost:3000/update.xml"
+}
