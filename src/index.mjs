@@ -1,37 +1,30 @@
+import staticFiles from "@fastify/static";
 import createFastify from "fastify";
-import staticFiles from "fastify-static";
-import { packCrx } from "./pack-crx.mjs";
-import path from "path";
-import { buildUpdateXML } from "./build-update-xml.mjs";
-import { fileURLToPath } from "url";
-import { existsSync } from "fs";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const crxDir = path.resolve(__dirname, "..", "crx");
-const outDir = path.resolve(__dirname, "..", "dist");
-const crxId = "hdneaoibdfdmifgfjjlkbkceanhjmgch";
+import { buildUpdateXML } from "./buildUpdateXML.mjs";
+import { outDir } from "./names.mjs";
+import { packCrx } from "./packCrx.mjs";
 
 const fastify = createFastify({ logger: true });
 
-fastify.register(staticFiles, { root: path.join(__dirname), prefix });
+fastify.register(staticFiles, { root: outDir });
 
-fastify.get("/crx", async (req, reply) => {
-  if (!existsSync(outDir)) {
-    await packCrx({ crxDir, outDir });
-  }
-
-  return reply.type("application/x-chrome-extension").sendFile(crxFile);
+fastify.get("/crx", async function (req, reply) {
+  const { crxId } = await packCrx(); // should do this in an upload endpoint
+  fastify.log.info(`extension packed: ${crxId}`);
+  return reply.type("application/x-chrome-extension").sendFile("crx.crx");
 });
 
 fastify.get("/update.xml", async (req, reply) => {
-  const xml = await buildUpdateXML(crxDir, crxId);
+  const xml = await buildUpdateXML();
   return reply.type("text/xml").send(xml);
 });
 
-fastify.listen(3000, (err, address) => {
-  if (err) {
+export async function startServer() {
+  try {
+    const address = await fastify.listen({ port: 3000 });
+    fastify.log.info(`server listening on ${address}`);
+  } catch (err) {
     fastify.log.error(err);
     process.exit(1);
   }
-  fastify.log.info(`server listening on ${address}`);
-});
+}

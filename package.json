@@ -2,21 +2,21 @@
   "name": "example-linux-hosted-crx",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "pack-crx": ""
+    "pack-crx": "node ./scripts/run-packCrx.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/static": "^6.5.0",
     "chromium": "^3.0.3",
     "execa": "^6.1.0",
     "extract-zip": "^2.0.1",
     "fast-xml-parser": "^4.0.9",
     "fastify": "^4.5.3",
-    "fastify-file-upload": "^4.0.0",
-    "fastify-static": "^4.5.0"
+    "fastify-file-upload": "^4.0.0"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.196",

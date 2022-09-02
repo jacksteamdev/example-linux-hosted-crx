@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Clock on Top",
   "description": "A Clock that displays on top of each website",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
@@ -15,6 +15,6 @@
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
   },
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmLAAyn2Fw/FoyhfpjsqwvhuX4JJkoPc/5xcQktY+5HgVcY11Mr2iMEoWqLbrnum3+1ZsKGcjK8eoYLwjbuMISznqvGncq1+jOUWyNSnFAQKuMwsRJhXCLz4r9+wRI8McLpVLmh8+8Nh+eNzUlvMXwsa4ACd5XH3tRm0mI5qDQnAkepnL1fIi3HJYXL1wXnzkWBYYKT3p5SPnWH8CKMtG7tzix+GhnkQDuaXMulaRHPLCbssnwklwz2rtXzb9dcTXjbPNoi+rx5E+rrvUQRSxOONVO3g0B+TtiabSNCeMoqTK1sq3Iql7J4TXkihaIHqWSf2etDf6EtMFRHYoB7RJ1wIDAQAB",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw6K3hmsQHnpE7E8wmKWh7M6oSQg0/k/XA79kXxZiSW/fapfwMtS8tILujiNl72henS160W7GNwgwTk7BohkOFH2tzOcHN2OHEeZNm3zIB6npfI3rxL2NS2MrqyuLNJNeD8j7mAx14i/NcHHYsL/eL3CpeHxOo7D59PcOXSiKWl4vgWnL1MEc0ZW1dVP5JxjiumF5V84VqJaoGrX+X32Q1wOFOnEU1HuHEKcFeBefOCcXj/lw7VysOYtEzce6ceFvNnuDu7OzXOkXHKxpbPF48LhrrpskKv/68P8IB5qFiZazw8aiwPt0iblQQiYOOPTNUPM8wUVguOhj3Np/WL+f2QIDAQAB",
   "update_url": "http://localhost:3000/update.xml"
 }
