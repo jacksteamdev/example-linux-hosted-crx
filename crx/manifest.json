@@ -1,19 +1,13 @@
 {
-  "manifest_version": 2,
-  "name": "Clock on Top",
-  "description": "A Clock that displays on top of each website",
-  "version": "1.0.4",
-  "content_scripts": [
-    {
-      "matches": ["https://*/*", "http://*/*"],
-      "js": ["content.js"],
-      "css": ["roboto.css", "content.css"]
-    }
-  ],
-  "icons": {
-    "16": "icons/icon-16.png",
-    "48": "icons/icon-48.png",
-    "128": "icons/icon-128.png"
+  "manifest_version": 3,
+  "name": "Updatable Extension",
+  "description": "An extension that pulls updates from a server",
+  "version": "1.0.17",
+  "action": {},
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
   },
+  "options_page": "options.html",
   "update_url": "http://localhost:3000/update.xml"
 }

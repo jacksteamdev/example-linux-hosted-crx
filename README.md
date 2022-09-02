@@ -28,3 +28,8 @@ If the user manually uninstalls the extension, Chrome places it on a blocklist
 and will ignore the preferences file. During development we can remove an
 extension id from the blocklist by manually installing the CRX file and removing
 it.
+
+## References
+
+- [Alternative extension installation methods - Chrome Developers](https://developer.chrome.com/docs/extensions/mv3/external_extensions/#preferences)
+- [Obtaining Chrome Extension ID for development - Stack Overflow](https://stackoverflow.com/questions/23873623/obtaining-chrome-extension-id-for-development)
