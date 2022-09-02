@@ -8,6 +8,26 @@ key.
 > extensions distributed from an origin other than the Chrome Web Store. See
 > [Google documentation](https://developer.chrome.com/docs/extensions/mv3/external_extensions/#preferences).
 
+## Usage
+
+```sh
+# install dependencies
+pnpm install
+# run the server and open chromium w/ local data dir
+pnpm start
+# restart server+chromium on file changes
+pnpm dev
+# pack /crx and print id+key
+pnpm pack-crx
+```
+
+The sample extension will open a tab with update info when an update occurs.
+
+The extension action will request an update check and display the results as a
+badge and title.
+
+## Notes
+
 An extension must be packed into a CRX file before distribution. Chrome supports
 packing an extension from the command line. `./src/packCrx.mjs` outlines this
 process.
