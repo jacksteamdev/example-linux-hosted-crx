@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "pack-crx": "node ./scripts/run-packCrx.mjs"
+    "pack-crx": "node ./scripts/run-packCrx.mjs",
+    "start": "node ./scripts/start-server.mjs",
+    "dev": "nodemon ./scripts/load-in-chromium.mjs"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.0.196",
-    "@types/node": "^18.7.14"
+    "@types/node": "^18.7.14",
+    "nodemon": "^2.0.19"
   }
 }
