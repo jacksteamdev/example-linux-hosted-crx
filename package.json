@@ -6,7 +6,7 @@
   "scripts": {
     "pack-crx": "node ./scripts/run-packCrx.mjs",
     "start": "node ./scripts/start-server.mjs",
-    "dev": "nodemon ./scripts/load-in-chromium.mjs"
+    "dev": "nodemon --ignore dist/ --ignore crx.crx --ignore crx.pem --ignore chromium-data/ ./scripts/load-in-chromium.mjs"
   },
   "keywords": [],
   "author": "",

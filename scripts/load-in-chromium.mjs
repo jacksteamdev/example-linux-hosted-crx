@@ -1,6 +1,6 @@
 import chromium from "chromium";
 import { execa } from "execa";
-import { installCrx } from "src/installCrx.mjs";
+import { installCrx } from "../src/installCrx.mjs";
 import { startServer } from "../src/index.mjs";
 import { dataDir } from "../src/names.mjs";
 import { packCrx } from "../src/packCrx.mjs";
