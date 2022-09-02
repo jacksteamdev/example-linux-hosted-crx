@@ -15,6 +15,5 @@
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
   },
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw6K3hmsQHnpE7E8wmKWh7M6oSQg0/k/XA79kXxZiSW/fapfwMtS8tILujiNl72henS160W7GNwgwTk7BohkOFH2tzOcHN2OHEeZNm3zIB6npfI3rxL2NS2MrqyuLNJNeD8j7mAx14i/NcHHYsL/eL3CpeHxOo7D59PcOXSiKWl4vgWnL1MEc0ZW1dVP5JxjiumF5V84VqJaoGrX+X32Q1wOFOnEU1HuHEKcFeBefOCcXj/lw7VysOYtEzce6ceFvNnuDu7OzXOkXHKxpbPF48LhrrpskKv/68P8IB5qFiZazw8aiwPt0iblQQiYOOPTNUPM8wUVguOhj3Np/WL+f2QIDAQAB",
   "update_url": "http://localhost:3000/update.xml"
 }
